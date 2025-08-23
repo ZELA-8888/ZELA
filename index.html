@@ -1,0 +1,1326 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>泽澜文创 - 以简驭繁·创意无限</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#8a7f93',
+              secondary: '#b4a3b8',
+              neutral: '#f5f2f0',
+              dark: '#333333',
+            },
+            fontFamily: {
+              sans: ['"Noto Sans SC"', 'sans-serif'],
+            },
+          },
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+        .text-shadow-sm {
+          text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+        .transition-transform-opacity {
+          transition-property: transform, opacity;
+        }
+      }
+    </style>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+      
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        font-family: 'Noto Sans SC', sans-serif;
+      }
+      
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+      
+      @media (max-width: 640px) {
+        .portfolio-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      
+      .timeline-line {
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: #e5e7eb;
+      }
+      
+      @media (min-width: 768px) {
+        .timeline-line {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <!-- Navbar -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="flex items-center justify-between">
+          <a href="#" class="text-2xl font-bold text-gray-900 flex items-center">
+            ZELA
+          </a>
+          
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex items-center space-x-8">
+            <a href="#about" class="text-gray-700 hover:text-gray-900 transition-colors">关于我们</a>
+            <a href="#services" class="text-gray-700 hover:text-gray-900 transition-colors">服务</a>
+            <a href="#portfolio" class="text-gray-700 hover:text-gray-900 transition-colors">案例</a>
+            <a href="#team" class="text-gray-700 hover:text-gray-900 transition-colors">团队</a>
+            <a href="#contact" class="text-gray-700 hover:text-gray-900 transition-colors">联系我们</a>
+          </nav>
+          
+          <!-- Mobile Menu Button -->
+          <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none" aria-label="Toggle menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden mt-4 py-4 border-t border-gray-100 hidden">
+          <nav class="flex flex-col space-y-4">
+            <a href="#about" class="text-gray-700 hover:text-gray-900 transition-colors mobile-link">关于我们</a>
+            <a href="#services" class="text-gray-700 hover:text-gray-900 transition-colors mobile-link">服务</a>
+            <a href="#portfolio" class="text-gray-700 hover:text-gray-900 transition-colors mobile-link">案例</a>
+            <a href="#team" class="text-gray-700 hover:text-gray-900 transition-colors mobile-link">团队</a>
+            <a href="#contact" class="text-gray-700 hover:text-gray-900 transition-colors mobile-link">联系我们</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden bg-gray-50">
+      <!-- Background with subtle pattern -->
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMDIwMjAiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0aDR2LTRoLTR2NHptMC04aDR2LTRoLTR2NHptLTEyIDB2LTRoNHY0aC00em0wLTjINDB2LTRINTZ2NGgtNHptLTEyIDB2LTRoNHY0aC00em0wLTjINDB2LTRINTZ2NGgtNHptLTEyIDB2LTRoNHY0aC00em0wLTjINDB2LTRINTZ2NGgtNHoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50"></div>
+      
+      <!-- Hero content -->
+      <div class="container mx-auto px-4 md:px-6 z-10 text-center">
+        <div class="max-w-3xl mx-auto">
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-6">
+            以简驭繁 创意无限
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-600 mb-10">
+            泽润万象·澜动未来
+          </p>
+          <a 
+            href="#about" 
+            class="inline-block bg-gray-900 text-white font-medium py-3 px-8 rounded-md hover:bg-gray-800 transition-colors shadow-sm"
+          >
+            了解更多
+          </a>
+        </div>
+      </div>
+      
+      <!-- Scroll indicator -->
+<!--      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-gray-500 animate-bounce">
+        <div class="flex flex-col items-center">
+          <span class="text-sm mb-2">向下滚动</span>
+          <i class="fas fa-chevron-down text-xs"></i>
+        </div>
+      </div>    -->
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-10">
+            关于我们
+          </h2>
+          
+          <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed mb-12">
+            <p>泽澜文创成立于2021年，专注于为客户提供简约而富有创意的设计解决方案。我们相信优秀的设计能够简化复杂，通过精心打磨每一个细节，为品牌创造独特价值与持久影响力。我们的团队由一群热爱设计与文化的创意人组成，致力于将简约美学融入商业实践，为客户打造兼具艺术性与功能性的设计作品。</p>
+            
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="bg-gray-50 p-6 rounded-lg">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+                  <i class="fas fa-palette text-gray-700 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">创意设计</h3>
+                <p class="text-gray-600">以简约美学为核心，创造独特而有意义的设计作品</p>
+              </div>
+              
+              <div class="bg-gray-50 p-6 rounded-lg">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+                  <i class="fas fa-lightbulb text-gray-700 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">创新思维</h3>
+                <p class="text-gray-600">不断探索新的设计方法与表达方式，突破传统界限</p>
+              </div>
+              
+              <div class="bg-gray-50 p-6 rounded-lg">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+                  <i class="fas fa-handshake text-gray-700 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">客户合作</h3>
+                <p class="text-gray-600">与客户建立深度合作关系，共同实现品牌价值最大化</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 md:px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+          我们的服务
+        </h2>
+        
+        <p class="text-xl text-gray-600 text-center max-w-2xl mx-auto mb-16">
+          提供全方位创意设计解决方案，满足您的品牌需求
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Service Card 1 -->
+          <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300 h-full flex flex-col">
+            <div class="p-6">
+              <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center mb-4"> 
+                <i class="fas fa-pen-fancy text-xl"></i>
+              </div>
+              
+              <h3 class="text-xl font-bold text-gray-900 mb-3">广告设计</h3>
+              
+              <p class="text-gray-600 mb-6">专注于品牌视觉传达，通过简约设计语言传递品牌核心价值。服务包括品牌标识设计、包装设计、平面广告、数字媒体广告等，帮助品牌在竞争中脱颖而出。</p>
+              
+              <!-- Service process -->
+              <div class="mb-6">
+                <h4 class="text-sm font-medium text-gray-500 mb-3 uppercase tracking-wider">服务流程</h4>
+                <div class="space-y-2">
+                  <div class="flex items-center text-sm">
+                    <div class="w-2 h-2 rounded-full bg-gray-300 mr-2"></div>
+                    <span class="text-gray-700">需求沟通</span>
+                  </div>
+                  <div class="flex items-center text-sm">
+                    <div class="w-2 h-2 rounded-full bg-gray-300 mr-2"></div>
+                    <span class="text-gray-700">创意构思</span>
+                  </div>
+                  <div class="flex items-center text-sm">
+                    <div class="w-2 h-2 rounded-full bg-gray-300 mr-2"></div>
+                    <span class="text-gray-700">设计执行</span>
+                  </div>
+                  <div class="flex items-center text-sm">
+                    <div class="w-2 h-2 rounded-full bg-gray-300 mr-2"></div>
+                    <span class="text-gray-700">反馈修改</span>
+                  </div>
+                  <div class="flex items-center text-sm">
+                    <div class="w-2 h-2 rounded-full bg-gray-300 mr-2"></div>
+                    <span class="text-gray-700">定稿交付</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Work examples -->
+            <div class="mt-auto border-t border-gray-100 p-6">
+              <h4 class="text-sm font-medium text-gray-500 mb-3 uppercase tracking-wider">代表作品</h4>
+              <div class="grid grid-cols-2 gap-2">
+                <div class="overflow-hidden rounded-md">
+                  <img 
+                    src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=modern%20minimalist%20advertising%20design%20clean%20lines&sign=65086fd454ea6df7c29bafbb82977b53" 
+                    alt="广告设计作品"
+                    class="w-full h-20 object-cover hover:opacity-90 transition-opacity"
+                  />
+                </div>
+                <div class="overflow-hidden rounded-md">
+                  <img 
+                    src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=minimalist%20logo%20design%20simple%20elegant&sign=3fecffb8c1f146a09a8c8ebcc26984be" 
+                    alt="广告设计作品"
+                    class="w-full h-20 object-cover hover:opacity-90 transition-opacity"
+                  />
+                </div>
+                <div class="overflow-hidden rounded-md">
+                  <img 
+                    src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=minimalist%20packaging%20design%20natural%20colors&sign=0dceccb3b98c27372563105dd94eb1cf" 
+                    alt="广告设计作品"
+                    class="w-full h-20 object-cover hover:opacity-90 transition-opacity"
+                  />
+                </div>
+                <div class="overflow-hidden rounded-md">
+                  <img 
+                    src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=modern%20brochure%20design%20minimalist%20layout&sign=3603ea97a43f83d45cd2b3bd9ac97dab" 
+                    alt="广告设计作品"
+                    class="w-full h-20 object-cover hover:opacity-90 transition-opacity"
+                  />
+                </div>
+              </div>
+            </div>
+            
+            <div class="px-6 pb-6">
+              <a 
+                href="#portfolio" 
+                class="inline-flex items-center text-gray-700 font-medium hover:text-gray-900 transition-colors"
+              >
+                了解更多
+                <i class="fas fa-arrow-right ml-2 text-xs"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Service Card 2 -->
+          <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300 h-full flex flex-col">
+            <div class="p-6">
+              <div class="w-12 h-12 rounded-full bg-green-100 text-green-700 flex items-center justify-center mb-4"> 
+                <i class="fas fa-building text-xl"></i>
+              </div>
+              
+              <h3 class="text-xl font-bold text-gray-900 mb-3">会展服务</h3>
+              
+              <p class="text-gray-600 mb-6">融合空间美学与品牌体验的展会解决方案。从概念规划到现场执行，打造令人印象深刻的展览空间，有效提升品牌曝光度与观众参与度。</p>
+              
+              <!-- Service process -->
+              <div class="mb-6">
+                <h4 class="text-sm font-medium text-gray-500 mb-3 uppercase tracking-wider">服务流程</h4>
+                <div class="space-y-2">
+                  <div class="flex items-center text-sm">
+                    <div class="w-2 h-2 rounded-full bg-gray-300 mr-2"></div>
+                    <span class="text-gray-700">场地分析</span>
+                  </div>
+                  <div class="flex items-center text-sm">
+                    <div class="w-2 h-2 rounded-full bg-gray-300 mr-2"></div>
+                    <span class="text-gray-700">概念设计</span>
+                  </div>
+                  <div class="flex items-center text-sm">
+                    <div class="w-2 h-2 rounded-full bg-gray-300 mr-2"></div>
+                    <span class="text-gray-700">3D建模</span>
+                  </div>
+                  <div class="flex items-center text-sm">
+                    <div class="w-2 h-2 rounded-full bg-gray-300 mr-2"></div>
+                    <span class="text-gray-700">工程落地</span>
+                  </div>
+                  <div class="flex items-center text-sm">
+                    <div class="w-2 h-2 rounded-full bg-gray-300 mr-2"></div>
+                    <span class="text-gray-700">现场执行</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Work examples -->
+            <div class="mt-auto border-t border-gray-100 p-6">
+              <h4 class="text-sm font-medium text-gray-500 mb-3 uppercase tracking-wider">代表作品</h4>
+              <div class="grid grid-cols-2 gap-2">
+                <div class="overflow-hidden rounded-md">
+                  <img 
+                    src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=modern%20exhibition%20booth%20design%20minimalist&sign=3b8ba9615d1966baaad7dfc2fe381ea4" 
+                    alt="展会设计作品"
+                    class="w-full h-20 object-cover hover:opacity-90 transition-opacity"
+                  />
+                </div>
+                <div class="overflow-hidden rounded-md">
+                  <img 
+                    src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=minimalist%20trade%20show%20design%20white%20space&sign=4fbf145be5a41039f829db1d8db4a411" 
+                    alt="展会设计作品"
+                    class="w-full h-20 object-cover hover:opacity-90 transition-opacity"
+                  />
+                </div>
+                <div class="overflow-hidden rounded-md">
+                  <img 
+                    src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=modern%20exhibition%20space%20design%20clean&sign=cb1765abf5f82fe413ac662352909474" 
+                    alt="展会设计作品"
+                    class="w-full h-20 object-cover hover:opacity-90 transition-opacity"
+                  />
+                </div>
+                <div class="overflow-hidden rounded-md">
+                  <img 
+                    src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=minimalist%20product%20display%20design%20elegant&sign=8d065cf5fec44622275074ab9687d367" 
+                    alt="展会设计作品"
+                    class="w-full h-20 object-cover hover:opacity-90 transition-opacity"
+                  />
+                </div>
+              </div>
+            </div>
+            
+            <div class="px-6 pb-6">
+              <a 
+                href="#portfolio" 
+                class="inline-flex items-center text-gray-700 font-medium hover:text-gray-900 transition-colors"
+              >
+                了解更多
+                <i class="fas fa-arrow-right ml-2 text-xs"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Service Card 3 -->
+          <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300 h-full flex flex-col">
+            <div class="p-6">
+              <div class="w-12 h-12 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center mb-4"> 
+                <i class="fas fa-box-open text-xl"></i>
+              </div>
+              
+              <h3 class="text-xl font-bold text-gray-900 mb-3">文创产品及周边</h3>
+              
+              <p class="text-gray-600 mb-6">将文化创意转化为实用美学产品。结合传统工艺与现代设计，开发具有文化内涵与实用价值的文创产品，传递品牌故事与文化价值。</p>
+              
+              <!-- Service process -->
+              <div class="mb-6">
+                <h4 class="text-sm font-medium text-gray-500 mb-3 uppercase tracking-wider">服务流程</h4>
+                <div class="space-y-2">
+                  <div class="flex items-center text-sm">
+                    <div class="w-2 h-2 rounded-full bg-gray-300 mr-2"></div>
+                    <span class="text-gray-700">文化调研</span>
+                  </div>
+                  <div class="flex items-center text-sm">
+                    <div class="w-2 h-2 rounded-full bg-gray-300 mr-2"></div>
+                    <span class="text-gray-700">创意发想</span>
+                  </div>
+                  <div class="flex items-center text-sm">
+                    <div class="w-2 h-2 rounded-full bg-gray-300 mr-2"></div>
+                    <span class="text-gray-700">产品设计</span>
+                  </div>
+                  <div class="flex items-center text-sm">
+                    <div class="w-2 h-2 rounded-full bg-gray-300 mr-2"></div>
+                    <span class="text-gray-700">打样测试</span>
+                  </div>
+                  <div class="flex items-center text-sm">
+                    <div class="w-2 h-2 rounded-full bg-gray-300 mr-2"></div>
+                    <span class="text-gray-700">生产落地</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Work examples -->
+            <div class="mt-auto border-t border-gray-100 p-6">
+              <h4 class="text-sm font-medium text-gray-500 mb-3 uppercase tracking-wider">代表作品</h4>
+              <div class="grid grid-cols-2 gap-2">
+                <div class="overflow-hidden rounded-md">
+                  <img 
+                    src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=minimalist%20stationery%20design%20elegant%20simple&sign=3ff56abf611cf7f6eb062d4e4c71f56d" 
+                    alt="文创产品作品"
+                    class="w-full h-20 object-cover hover:opacity-90 transition-opacity"
+                  />
+                </div>
+                <div class="overflow-hidden rounded-md">
+                  <img 
+                    src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=minimalist%20home%20decor%20design%20natural%20materials&sign=e09fdf652fbbe6c16d453192a1d9a0f4" 
+                    alt="文创产品作品"
+                    class="w-full h-20 object-cover hover:opacity-90 transition-opacity"
+                  />
+                </div>
+                <div class="overflow-hidden rounded-md">
+                  <img 
+                    src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=minimalist%20cultural%20product%20design%20traditional%20elements&sign=93b8adb72a3b935a188aece9847f9eb1" 
+                    alt="文创产品作品"
+                    class="w-full h-20 object-cover hover:opacity-90 transition-opacity"
+                  />
+                </div>
+                <div class="overflow-hidden rounded-md">
+                  <img 
+                    src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=minimalist%20gift%20set%20design%20elegant%20packaging&sign=18eff28b1757fbf1db1a183bddc32ad1" 
+                    alt="文创产品作品"
+                    class="w-full h-20 object-cover hover:opacity-90 transition-opacity"
+                  />
+                </div>
+              </div> 
+            </div>
+            
+            <div class="px-6 pb-6">
+              <a 
+                href="#portfolio" 
+                class="inline-flex items-center text-gray-700 font-medium hover:text-gray-900 transition-colors"
+              >
+                了解更多
+                <i class="fas fa-arrow-right ml-2 text-xs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+          项目案例
+        </h2>
+        
+        <p class="text-xl text-gray-600 text-center max-w-2xl mx-auto mb-12">
+          探索我们的创意设计作品，每一个项目都是独特理念的体现
+        </p>
+        
+        <!-- Portfolio Filter -->
+        <div class="flex flex-wrap justify-center gap-2 mb-12">
+          <button class="portfolio-filter-btn px-5 py-2 rounded-full text-sm font-medium transition-colors bg-gray-900 text-white" data-filter="all">
+            全部作品
+          </button>
+          <button class="portfolio-filter-btn px-5 py-2 rounded-full text-sm font-medium transition-colors bg-gray-100 text-gray-700 hover:bg-gray-200" data-filter="ad">
+            广告设计
+          </button>
+          <button class="portfolio-filter-btn px-5 py-2 rounded-full text-sm font-medium transition-colors bg-gray-100 text-gray-700 hover:bg-gray-200" data-filter="exhibition">
+            展会设计
+          </button>
+          <button class="portfolio-filter-btn px-5 py-2 rounded-full text-sm font-medium transition-colors bg-gray-100 text-gray-700 hover:bg-gray-200" data-filter="product">
+            文创产品
+          </button>
+        </div>
+        
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid">
+          <!-- Portfolio Item 1 -->
+          <div class="portfolio-item group cursor-pointer" data-category="ad">
+            <div class="relative overflow-hidden rounded-lg mb-3">
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=modern%20minimalist%20advertising%20design%20clean%20lines&sign=eaccf92f2ee63d0202a87a036e713896" 
+                alt="科技产品发布会海报"
+                class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-colors duration-300 flex items-center justify-center">
+                <button class="portfolio-modal-btn bg-white text-gray-900 rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity" 
+                  data-id="1"
+                  data-title="科技产品发布会海报"
+                  data-category="广告设计"
+                  data-year="2025"
+                  data-client="科技未来"
+                  data-description="为科技公司新产品发布会设计的系列海报，采用简约几何风格，突出产品特性与未来感。设计以简洁的线条和有限的色彩传达科技感与创新精神，同时保持视觉上的平衡与和谐。"
+                  data-image="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_16_9&prompt=modern%20minimalist%20advertising%20design%20clean%20lines&sign=29b76b2ab269e9591b2d02c9aee15cfd"
+                >
+                  <i class="fas fa-search-plus"></i>
+                </button>
+              </div>
+            </div>
+            
+            <h3 class="text-lg font-semibold text-gray-900 group-hover:text-gray-600 transition-colors">
+              科技产品发布会海报
+            </h3>
+            
+            <div class="flex justify-between items-center mt-1 text-sm text-gray-500">
+              <span>广告设计</span>
+              <span>2025</span>
+            </div>
+          </div>
+          
+          <!-- Portfolio Item 2 -->
+          <div class="portfolio-item group cursor-pointer" data-category="ad">
+            <div class="relative overflow-hidden rounded-lg mb-3">
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=minimalist%20packaging%20design%20natural%20colors&sign=9e79553790246d154cdff85d370dd94d" 
+                alt="有机食品包装系列"
+                class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-colors duration-300 flex items-center justify-center">
+                <button class="portfolio-modal-btn bg-white text-gray-900 rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                  data-id="2"
+                  data-title="有机食品包装系列"
+                  data-category="广告设计"
+                  data-year="2025"
+                  data-client="自然之源"
+                  data-description="有机食品品牌包装设计，使用环保材料与简约插画风格，传达自然、健康的品牌理念。设计采用可回收材料和大豆油墨印刷，体现品牌对环保的承诺。"
+                  data-image="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_16_9&prompt=minimalist%20packaging%20design%20natural%20colors&sign=f1ae5d7d8e986682f9f4985d95cd0d20"
+                >
+                  <i class="fas fa-search-plus"></i>
+                </button>
+              </div>
+            </div>
+            
+            <h3 class="text-lg font-semibold text-gray-900 group-hover:text-gray-600 transition-colors">
+              有机食品包装系列
+            </h3>
+            
+            <div class="flex justify-between items-center mt-1 text-sm text-gray-500">
+              <span>广告设计</span>
+              <span>2025</span>
+            </div>
+          </div>
+          
+          <!-- Portfolio Item 3 -->
+          <div class="portfolio-item group cursor-pointer" data-category="exhibition">
+            <div class="relative overflow-hidden rounded-lg mb-3">
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=modern%20exhibition%20booth%20design%20minimalist&sign=6561eabd7866dc3c98ea00c0e669f836" 
+                alt="国际设计周展位"
+                class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-colors duration-300 flex items-center justify-center">
+                <button class="portfolio-modal-btn bg-white text-gray-900 rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                  data-id="3"
+                  data-title="国际设计周展位"
+                  data-category="展会设计"
+                  data-year="2025"
+                  data-client="设计协会"
+                  data-description="国际设计周展位设计，以'空间与光影'为主题，创造沉浸式体验空间。设计采用模块化结构，可根据不同场地需求进行重组，体现可持续设计理念。"
+                  data-image="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_16_9&prompt=modern%20exhibition%20booth%20design%20minimalist&sign=fd23c413c2c979243a640aca12e8fc95"
+                >
+                  <i class="fas fa-search-plus"></i>
+                </button>
+              </div>
+            </div>
+            
+            <h3 class="text-lg font-semibold text-gray-900 group-hover:text-gray-600 transition-colors">
+              国际设计周展位
+            </h3>
+            
+            <div class="flex justify-between items-center mt-1 text-sm text-gray-500">
+              <span>展会设计</span>
+              <span>2025</span>
+            </div>
+          </div>
+          
+          <!-- Portfolio Item 4 -->
+          <div class="portfolio-item group cursor-pointer" data-category="exhibition">
+            <div class="relative overflow-hidden rounded-lg mb-3">
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=minimalist%20trade%20show%20design%20white%20space&sign=37806b213c91604acfed8dd88716e801" 
+                alt="科技产品体验区"
+                class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-colors duration-300 flex items-center justify-center">
+                <button class="portfolio-modal-btn bg-white text-gray-900 rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                  data-id="4"
+                  data-title="科技产品体验区"
+                  data-category="展会设计"
+                  data-year="2025"
+                  data-client="未来科技"
+                  data-description="消费电子展产品体验区设计，结合互动装置与简约美学，提升产品体验感。空间设计注重人流引导与产品展示的平衡，创造舒适的参观体验。"
+                  data-image="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_16_9&prompt=minimalist%20trade%20show%20design%20white%20space&sign=5dd30abc21b5581956749bf2541b2a7e"
+                >
+                  <i class="fas fa-search-plus"></i>
+                </button>
+              </div>
+            </div>
+            
+            <h3 class="text-lg font-semibold text-gray-900 group-hover:text-gray-600 transition-colors">
+              科技产品体验区
+            </h3>
+            
+            <div class="flex justify-between items-center mt-1 text-sm text-gray-500">
+              <span>展会设计</span>
+              <span>2025</span>
+            </div>
+          </div>
+          
+          <!-- Portfolio Item 5 -->
+          <div class="portfolio-item group cursor-pointer" data-category="product">
+            <div class="relative overflow-hidden rounded-lg mb-3">
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=minimalist%20stationery%20design%20elegant%20simple&sign=56c3b770ec0a888200a2eb00ca850302" 
+                alt="博物馆文创系列"
+                class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-colors duration-300 flex items-center justify-center">
+                <button class="portfolio-modal-btn bg-white text-gray-900 rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                  data-id="5"
+                  data-title="博物馆文创系列"
+                  data-category="文创产品"
+                  data-year="2025"
+                  data-client="国家博物馆"
+                  data-description="以馆藏文物为灵感的文创产品系列设计，包含文具、家居饰品等多个品类。设计将传统元素与现代生活需求相结合，让文化以更贴近生活的方式传播。"
+                  data-image="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_16_9&prompt=minimalist%20stationery%20design%20elegant%20simple&sign=ee80a346f161715c13932e1a311db3c8"
+                >
+                  <i class="fas fa-search-plus"></i>
+                </button>
+              </div>
+            </div>
+            
+            <h3 class="text-lg font-semibold text-gray-900 group-hover:text-gray-600 transition-colors">
+              博物馆文创系列
+            </h3>
+            
+            <div class="flex justify-between items-center mt-1 text-sm text-gray-500">
+              <span>文创产品</span>
+              <span>2025</span>
+            </div>
+          </div>
+        
+          <!-- Portfolio Item 6 -->
+          <div class="portfolio-item group cursor-pointer" data-category="product">
+            <div class="relative overflow-hidden rounded-lg mb-3">
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=minimalist%20home%20decor%20design%20natural%20materials&sign=240ca380991648822c229cc8de92c386" 
+                alt="城市印象文具套装"
+                class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-colors duration-300 flex items-center justify-center">
+                <button class="portfolio-modal-btn bg-white text-gray-900 rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                  data-id="6"
+                  data-title="城市印象文具套装"
+                  data-category="文创产品"
+                  data-year="2025"
+                  data-client="城市旅游局"
+                  data-description="以城市地标与文化元素为主题的文具套装设计，兼具实用功能与纪念意义。产品采用环保材料制作，包装设计融入城市地图元素，展现城市独特魅力。"
+                  data-image="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_16_9&prompt=minimalist%20home%20decor%20design%20natural%20materials&sign=a2f6bd229ba2813d88196456c6699f30"
+                >
+                  <i class="fas fa-search-plus"></i>
+                </button>
+              </div>
+            </div>
+            
+            <h3 class="text-lg font-semibold text-gray-900 group-hover:text-gray-600 transition-colors">
+              城市印象文具套装
+            </h3>
+            
+            <div class="flex justify-between items-center mt-1 text-sm text-gray-500">
+              <span>文创产品</span>
+              <span>2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 md:px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+          核心团队
+        </h2>
+        
+        <p class="text-xl text-gray-600 text-center max-w-2xl mx-auto mb-16">
+          由充满激情与创意的专业人才组成的团队
+        </p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+          <!-- Team Member 1 -->
+          <div class="text-center">
+            <div class="relative mb-4 overflow-hidden rounded-full w-48 h-48 mx-auto">
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=portrait%20of%20creative%20director%20professional%20minimalist&sign=dd98df2f55554de57bb3c99c5fede081" 
+                alt="张明"
+                class="w-full h-full object-cover object-center"
+              />
+            </div>
+            
+            <h3 class="text-lg font-semibold text-gray-900">张明</h3>
+            <p class="text-gray-600 text-sm mb-2">创意总监</p>
+            
+            <div class="flex justify-center space-x-3 mt-3">
+              <a href="#" class="text-gray-400 hover:text-gray-600 transition-colors" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-600 transition-colors" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Team Member 2 -->
+          <div class="text-center">
+            <div class="relative mb-4 overflow-hidden rounded-full w-48 h-48 mx-auto">
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=portrait%20of%20designer%20professional%20minimalist&sign=692c340513b32b4052217eee18008915" 
+                alt="李华"
+                class="w-full h-full object-cover object-center"
+              />
+            </div>
+            
+            <h3 class="text-lg font-semibold text-gray-900">李华</h3>
+            <p class="text-gray-600 text-sm mb-2">设计总监</p>
+            
+            <div class="flex justify-center space-x-3 mt-3">
+              <a href="#" class="text-gray-400 hover:text-gray-600 transition-colors" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-600 transition-colors" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Team Member 3 -->
+          <div class="text-center">
+            <div class="relative mb-4 overflow-hidden rounded-full w-48 h-48 mx-auto">
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=portrait%20of%20space%20designer%20professional%20minimalist&sign=79a6828def47799c0bcb9475e89aa6a5" 
+                alt="王芳"
+                class="w-full h-full object-cover object-center"
+              />
+            </div>
+            
+            <h3 class="text-lg font-semibold text-gray-900">王芳</h3>
+            <p class="text-gray-600 text-sm mb-2">空间设计师</p>
+            
+            <div class="flex justify-center space-x-3 mt-3">
+              <a href="#" class="text-gray-400 hover:text-gray-600 transition-colors" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-600 transition-colors" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Team Member 4 -->
+          <div class="text-center">
+            <div class="relative mb-4 overflow-hidden rounded-full w-48 h-48 mx-auto">
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=portrait%20of%20product%20designer%20professional%20minimalist&sign=00ec32cd6d1d0fdfecba99d31ee084e5" 
+                alt="赵强"
+                class="w-full h-full object-cover object-center"
+              />
+            </div>
+            
+            <h3 class="text-lg font-semibold text-gray-900">赵强</h3>
+            <p class="text-gray-600 text-sm mb-2">产品设计师</p>
+            
+            <div class="flex justify-center space-x-3 mt-3">
+              <a href="#" class="text-gray-400 hover:text-gray-600 transition-colors" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-600 transition-colors" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Team Member 5 -->
+          <div class="text-center">
+            <div class="relative mb-4 overflow-hidden rounded-full w-48 h-48 mx-auto">
+              <img 
+                src="https://space.coze.cn/api/coze_space/gen_image?image_size=square&prompt=portrait%20of%20manager%20professional%20minimalist&sign=1ce6c1c7e9e4cd80cb5dabddf9ac3018" 
+                alt="陈静"
+                class="w-full h-full object-cover object-center"
+              />
+            </div>
+            
+            <h3 class="text-lg font-semibold text-gray-900">陈静</h3>
+            <p class="text-gray-600 text-sm mb-2">项目经理</p>
+            
+            <div class="flex justify-center space-x-3 mt-3">
+              <a href="#" class="text-gray-400 hover:text-gray-600 transition-colors" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-600 transition-colors" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+          发展历程
+        </h2>
+        
+        <p class="text-xl text-gray-600 text-center max-w-2xl mx-auto mb-16">
+          我们的成长足迹与重要里程碑
+        </p>
+        
+        <div class="relative max-w-3xl mx-auto">
+          <!-- Timeline line -->
+          <div class="timeline-line absolute"></div>
+          
+          <!-- Timeline items -->
+          <div class="space-y-12">
+            <!-- Timeline Item 1 -->
+            <div class="relative flex">
+              <div class="w-full md:w-1/2 md:pr-12 md:text-right">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                  <span class="inline-block px-3 py-1 bg-gray-200 text-gray-800 text-sm font-medium rounded-full mb-3">
+                    2021
+                  </span>
+                  <p class="text-gray-700">公司成立，专注于品牌设计与文创产品开发</p>
+                </div>
+              </div>
+              
+              <!-- Timeline dot -->
+              <div class="absolute left-0 md:left-1/2 top-6 w-4 h-4 bg-gray-900 rounded-full transform md:translate-x-px"></div>
+            </div>
+            
+            <!-- Timeline Item 2 -->
+            <div class="relative flex flex-row-reverse">
+              <div class="w-full md:w-1/2 md:pl-12">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                  <span class="inline-block px-3 py-1 bg-gray-200 text-gray-800 text-sm font-medium rounded-full mb-3">
+                    2022
+                  </span>
+                  <p class="text-gray-700">推出首个文创产品系列，获得市场广泛认可</p>
+                </div>
+              </div>
+              
+              <!-- Timeline dot -->
+              <div class="absolute left-0 md:left-1/2 top-6 w-4 h-4 bg-gray-900 rounded-full transform md:translate-x-px"></div>
+            </div>
+            
+            <!-- Timeline Item 3 -->
+            <div class="relative flex">
+              <div class="w-full md:w-1/2 md:pr-12 md:text-right">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                  <span class="inline-block px-3 py-1 bg-gray-200 text-gray-800 text-sm font-medium rounded-full mb-3">
+                    2023
+                  </span>
+                  <p class="text-gray-700">拓展展会设计业务，完成多个大型展览项目</p>
+                </div>
+              </div>
+              
+              <!-- Timeline dot -->
+              <div class="absolute left-0 md:left-1/2 top-6 w-4 h-4 bg-gray-900 rounded-full transform md:translate-x-px"></div>
+            </div>
+            
+            <!-- Timeline Item 4 -->
+            <div class="relative flex flex-row-reverse">
+              <div class="w-full md:w-1/2 md:pl-12">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                  <span class="inline-block px-3 py-1 bg-gray-200 text-gray-800 text-sm font-medium rounded-full mb-3">
+                    2024
+                  </span>
+                  <p class="text-gray-700">荣获"年度最佳设计机构"称号</p>
+                </div>
+              </div>
+              
+              <!-- Timeline dot -->
+              <div class="absolute left-0 md:left-1/2 top-6 w-4 h-4 bg-gray-900 rounded-full transform md:translate-x-px"></div>
+            </div>
+            
+            <!-- Timeline Item 5 -->
+            <div class="relative flex">
+              <div class="w-full md:w-1/2 md:pr-12 md:text-right">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                  <span class="inline-block px-3 py-1 bg-gray-200 text-gray-800 text-sm font-medium rounded-full mb-3">
+                    2025
+                  </span>
+                  <p class="text-gray-700">与多家品牌建立长期合作关系</p>
+                </div>
+              </div>
+              
+              <!-- Timeline dot --> 
+              <div class="absolute left-0 md:left-1/2 top-6 w-4 h-4 bg-gray-900 rounded-full transform md:translate-x-px"></div>
+            </div>
+            
+            <!-- Timeline Item 6 -->
+            <div class="relative flex flex-row-reverse">
+              <div class="w-full md:w-1/2 md:pl-12">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                  <span class="inline-block px-3 py-1 bg-gray-200 text-gray-800 text-sm font-medium rounded-full mb-3">
+                    2026
+                  </span>
+                  <p class="text-gray-700">完成品牌升级，确立"泽澜文创"核心理念</p>
+                </div>
+              </div>
+              
+              <!-- Timeline dot -->
+              <div class="absolute left-0 md:left-1/2 top-6 w-4 h-4 bg-gray-900 rounded-full transform md:translate-x-px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section --> 
+ <!--   <section id="contact" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 md:px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+          联系我们
+        </h2>
+        
+        <p class="text-xl text-gray-600 text-center max-w-2xl mx-auto mb-16">
+          无论您有任何需求或疑问，都欢迎与我们联系
+        </p>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+-->
+            <!-- Contact form -->
+ <!--         <div>
+            <div class="bg-white p-8 rounded-lg shadow-sm">
+              <h3 class="text-2xl font-semibold text-gray-900 mb-6">发送咨询</h3>
+              
+              <form id="contact-form" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="name" class="block text-sm font-medium text-gray-700 mb-1">
+                      姓名
+                    </label>
+                    <input
+                      type="text" 
+                      id="name"
+                      name="name"
+                      required
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="phone" class="block text-sm font-medium text-gray-700 mb-1">
+                      电话
+                    </label>
+                    <input
+                      type="tel" 
+                      id="phone"
+                      name="phone"
+                      required
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label htmlFor="email" class="block text-sm font-medium text-gray-700 mb-1">
+                    邮箱
+                  </label>
+                  <input
+                    type="email" 
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="message" class="block text-sm font-medium text-gray-700 mb-1">
+                    需求描述
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={5}
+                    required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                  ></textarea>
+                </div>
+                
+                <button
+                  type="submit"
+                  class="w-full bg-gray-900 text-white font-medium py-3 px-4 rounded-md hover:bg-gray-800 transition-colors"
+                >
+                  发送消息
+                </button>
+              </form>
+            </div>
+          </div>
+  -->        
+          <!-- Contact information -->
+ <!--         <div class="flex flex-col justify-center">
+            <div class="space-y-8">
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-6">联系方式</h3>
+                
+                <div class="space-y-4">
+                  <div class="flex items-start">
+                    <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0 mr-4">
+                      <i class="fas fa-map-marker-alt text-gray-700"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-sm font-medium text-gray-500 mb-1">地址</h4>
+                      <p class="text-gray-700">北京市朝阳区建国路88号简约文创大厦</p>   
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start">
+                    <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0 mr-4">
+                      <i class="fas fa-phone text-gray-700"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-sm font-medium text-gray-500 mb-1">电话</h4>
+                      <p class="text-gray-700">010-88887777</p> 
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start">
+                    <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0 mr-4">
+                      <i class="fas fa-envelope text-gray-700"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-sm font-medium text-gray-500 mb-1">邮箱</h4>
+                      <p class="text-gray-700">contact@jianyue.com</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h4 class="text-sm font-medium text-gray-500 mb-3">关注我们</h4>
+                <div class="flex space-x-4">
+                  <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-gray-200 transition-colors" aria-label="微博">
+                    <i class="fab fa-weibo"></i>
+                  </a>
+                  <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-gray-200 transition-colors" aria-label="微信">
+                    <i class="fab fa-wechat"></i>
+                  </a>
+                  <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-gray-200 transition-colors" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-gray-200 transition-colors" aria-label="Behance">
+                    <i class="fab fa-behance"></i>
+                  </a>
+                </div>
+              </div>
+-->              
+              <!-- Office image -->
+ <!--             <div class="rounded-lg overflow-hidden h-64">
+                <img 
+                  src="https://space.coze.cn/api/coze_space/gen_image?image_size=landscape_4_3&prompt=minimalist%20office%20space%20design%20modern&sign=bba9a4791fb5e700ebc014ea5787b458" 
+                  alt="办公环境"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+-->
+    <!-- Footer -->
+    <section id="contact" class="py-20 bg-gray-50">
+    <footer class="bg-gray-900 text-gray-300 py-12">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="md:col-span-1">
+            <h3 className="text-xl font-bold text-white mb-4">ZELA</h3>
+            <p className="text-sm text-gray-400">
+              泽润万象·澜动未来
+            </p>
+          </div>
+          
+          <div>
+            <h4 className="text-white font-medium mb-4"><a href="https://zela.taobao.com/">周边商品</a></h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#about" className="hover:text-white transition-colors">关于我们</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors">设计服务</a></li>
+              <li><a href="#portfolio" className="hover:text-white transition-colors">项目案例</a></li>
+              <li><a href="#contact" className="hover:text-white transition-colors">联系我们</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-white font-medium mb-4">法律信息</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#" className="hover:text-white transition-colors">隐私政策</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">服务条款</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">版权声明</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-white font-medium mb-4">关注我们</h4> 
+            <div className="flex space-x-4">
+              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition-colors" aria-label="微博">
+                <i class="fab fa-weibo"></i>
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition-colors" aria-label="微信">
+                <i class="fab fa-wechat"></i>
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition-colors" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition-colors" aria-label="Behance">
+                <i class="fab fa-behance"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-sm text-gray-500">
+            © 2025 ZELA 泽澜文创 版权所有
+          </p>
+          <p className="text-sm text-gray-500 mt-2 md:mt-0">
+            感谢您对我们的信任与支持！
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Portfolio Modal -->
+    <div id="portfolio-modal" class="fixed inset-0 z-[100] bg-black bg-opacity-70 flex items-center justify-center p-4 hidden">
+      <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-auto">
+        <button id="modal-close" class="absolute top-4 right-4 bg-white bg-opacity-80 p-2 rounded-full text-gray-700 hover:text-gray-900 z-10" aria-label="关闭"> 
+          <i class="fas fa-times"></i>
+        </button>
+        
+        <div class="relative h-80 md:h-96">
+          <img id="modal-image" 
+            src="" 
+            alt="作品大图"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        
+        <div class="p-6 md:p-8">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start md:mb-6">
+            <div>
+              <h2 id="modal-title" class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+              </h2>
+              <div id="modal-category" class="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full mb-4">
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-x-8 gap-y-2 text-sm">
+              <div>
+                <p class="text-gray-500">客户</p>
+                <p id="modal-client" class="font-medium text-gray-900"></p>
+              </div>
+              <div>
+                <p class="text-gray-500">年份</p>
+                <p id="modal-year" class="font-medium text-gray-900"></p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="border-t border-gray-100 pt-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">项目描述</h3>
+            <p id="modal-description" class="text-gray-700 leading-relaxed">
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript --><script>
+      // Navbar scroll effect
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+          navbar.classList.add('bg-white', 'shadow-md', 'py-3');
+          navbar.classList.remove('bg-transparent', 'py-5');
+        } else {
+          navbar.classList.add('bg-transparent', 'py-5');
+          navbar.classList.remove('bg-white', 'shadow-md', 'py-3');
+        }
+      });
+      
+      // Mobile menu toggle
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        
+        // Change menu icon
+        if (mobileMenu.classList.contains('hidden')) {
+          menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+        } else {
+          menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+        }
+      });
+      
+      // Close mobile menu when clicking a link
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+        });
+      });
+      
+      // Portfolio filtering
+      const filterButtons = document.querySelectorAll('.portfolio-filter-btn');
+      const portfolioItems = document.querySelectorAll('.portfolio-item');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Update active button
+          filterButtons.forEach(btn => {
+            btn.classList.remove('bg-gray-900', 'text-white');
+            btn.classList.add('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
+          });
+          
+          button.classList.remove('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
+          button.classList.add('bg-gray-900', 'text-white');
+          
+          const filterValue = button.getAttribute('data-filter');
+          
+          // Filter portfolio items
+          portfolioItems.forEach(item => {
+            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+      
+      // Portfolio modal
+      const modal = document.getElementById('portfolio-modal');
+      const modalClose = document.getElementById('modal-close');
+      const modalTitle = document.getElementById('modal-title');
+      const modalCategory = document.getElementById('modal-category');
+      const modalYear = document.getElementById('modal-year');
+      const modalClient = document.getElementById('modal-client');
+      const modalDescription = document.getElementById('modal-description');
+      const modalImage = document.getElementById('modal-image');
+      const modalButtons = document.querySelectorAll('.portfolio-modal-btn');
+      
+      modalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          modalTitle.textContent = button.getAttribute('data-title');
+          modalCategory.textContent = button.getAttribute('data-category');
+          modalYear.textContent = button.getAttribute('data-year');
+          modalClient.textContent = button.getAttribute('data-client');
+          modalDescription.textContent = button.getAttribute('data-description');
+          modalImage.src = button.getAttribute('data-image');
+          modalImage.alt = button.getAttribute('data-title');
+          
+          modal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+      
+      modalClose.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      });
+      
+      // Close modal when clicking outside
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        }
+      });
+      
+      // Contact form submission
+      const contactForm = document.getElementById('contact-form');
+      
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Simulate form submission
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+        
+        submitButton.disabled = true;
+        submitButton.textContent = '发送中...';
+        
+        setTimeout(() => {
+          // Show success message
+          alert('表单提交成功，我们将尽快与您联系！');
+          
+          // Reset form
+          contactForm.reset();
+          
+          // Restore button
+          submitButton.disabled = false;
+          submitButton.textContent = originalText;
+        }, 1500);
+      });
+    </script>
+  </body>
+</html>
